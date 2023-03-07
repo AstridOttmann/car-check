@@ -1,9 +1,13 @@
 package org.example;
 
-public class CarInspectionService {
+import java.util.ArrayList;
+import java.util.List;
 
-    public boolean checkTires(Car testCar){
-       return testCar.getNumberOfTires() == 4;
+public class CarInspectionService {
+   // private List<Car> carChecks;
+
+    public boolean checkTires(Car testCar) {
+        return testCar.getNumberOfTires() == 4;
     }
 
     public boolean checkSeatBelt(Car testCar) {
@@ -13,4 +17,15 @@ public class CarInspectionService {
     public boolean checkAirbag(Car testCar) {
         return testCar.getAirbag();
     }
+
+    public boolean checkNumberOfDoors(Car testCar) {
+        return testCar.getNumberOfDoors() == 3 || testCar.getNumberOfDoors() == 5;
+    }
+
+    public boolean checkCar(Car testCar) {
+        return checkTires(testCar) && checkNumberOfDoors(testCar)
+                && checkSeatBelt(testCar) && checkAirbag(testCar);
+    }
+
 }
+
