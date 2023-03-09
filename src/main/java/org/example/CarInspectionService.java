@@ -27,5 +27,10 @@ public class CarInspectionService {
                 && checkSeatBelt(testCar) && checkAirbag(testCar);
     }
 
+    @Override
+    public String toString() {
+        return "CarInspectionService{}";
+    }
+
 }
 
