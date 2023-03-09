@@ -7,6 +7,6 @@ public class Main {
         CarInspectionService carInspectionService = new CarInspectionService();
         System.out.println(carInspectionService.checkCar(validCar));
         System.out.println(carInspectionService.checkCar(invalidCar));
-        System.out.println(invalidCar.getNumberOfDoors());
+
     }
 }
